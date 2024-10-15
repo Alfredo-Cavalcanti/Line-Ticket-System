@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sistema de Senhas</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Atendimento Geral</h1>
+        </header>
+        <div class="container">
+            <section class="coluna-esquerda">
+                <h2>Aguardando atendimento</h2>
+                <div class="button-container">
+                    <button id="geral-btn" class="senha-gerada">Geral</button>
+                    <button id="idoso-btn" class="senha-gerada">Idoso</button>
+                    <button id="preferencial-btn" class="senha-gerada">
+                        Preferencial
+                    </button>
+                </div>
+                <div class="senhas-geradas">
+                    <h3>Senhas Geradas:</h3>
+                    <div class="lista-senhas">
+                        <p>Nenhuma senha gerada</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="coluna-central">
+                <h2>Em Atendimento</h2>
+                <div class="guiche">
+                    <p>Guichê 1</p>
+                    <p>Status: Deslogado</p>
+                </div>
+                <div class="guiche">
+                    <p>Guichê 2</p>
+                    <p>Status: Deslogado</p>
+                </div>
+                <div class="guiche">
+                    <p>Guichê 3</p>
+                    <p>Status: Deslogado</p>
+                </div>
+                <div class="footer-buttons">
+                    <button class="login-button" id="login-btn">Login</button>
+                    <button class="logout-button" id="logout-btn">
+                        Logout
+                    </button>
+                </div>
+            </section>
+
+            <section class="coluna-direita">
+                <h2>Atendimentos Concluídos</h2>
+                <div class="atendimentos-concluidos">
+                    <div class="lista-atendimentos-concluidos">
+                        <p>Nenhum cliente atendido</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <p>© 2024 Sistema de Ticket.</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #b2ebf2;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.coluna-esquerda,
+.coluna-central,
+.coluna-direita {
+    width: 30%;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #00796b;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.senhas-geradas {
+    height: 340px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.senhas-geradas h3 {
+    margin: 0;
+    background-color: #ffffff;
+    z-index: 10;
+}
+
+.lista-senhas-geradas {
+    margin-top: 10px;
+}
+
+.atendimentos-concluidos {
+    height: 385px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+.lista-atendimentos-concluidos {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-atendimentos-concluidos p {
+    margin: 5px 0;
+}
+
+.senha-gerada {
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 30%;
+    text-align: center;
+}
+
+.senha-ativa {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+.senha-inativa {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+}
+
+.guiche {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #e0f2f1;
+    border-radius: 8px;
+    text-align: center;
+    height: 80px;
+}
+
+.atender-btn {
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.atender-btn:hover {
+    background-color: #45a049;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.login-button,
+.logout-button {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 48%;
+}
+
+.logout-button {
+    background-color: #f44336;
+}
+
+footer {
+    text-align: center;
+    background-color: #004d40;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
