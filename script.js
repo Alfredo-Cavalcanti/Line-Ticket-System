@@ -35,9 +35,13 @@ function gerarSenha(tipo) {
 
 function exibirSenhas() {
     const senhaLista = document.querySelector(".senhas-geradas");
-    senhaLista.innerHTML =
-        "<h3>Senhas Geradas:</h3>" +
-        senhas.map((senha) => `<p>${senha}</p>`).join("");
+    let senhasHTML = "<h3>Senhas Geradas:</h3>";
+
+    for (let i = 0; i < senhas.length; i++) {
+        senhasHTML += `<p>${senhas[i]}</p>`;
+    }
+
+    senhaLista.innerHTML = senhasHTML;
 }
 
 document.getElementById("geral-btn").addEventListener("click", function () {
@@ -76,7 +80,15 @@ function obterProximaSenha() {
 }
 
 function removerSenha(senha) {
-    senhas = senhas.filter((s) => s !== senha);
+    let novasSenhas = [];
+
+    for (let i = 0; i < senhas.length; i++) {
+        if (senhas[i] !== senha) {
+            novasSenhas.push(senhas[i]);
+        }
+    }
+
+    senhas = novasSenhas;
     exibirSenhas();
 }
 
@@ -131,6 +143,22 @@ document.getElementById("login-btn").addEventListener("click", function () {
 });
 
 document.getElementById("logout-btn").addEventListener("click", function () {
+
+    const guiches = document.querySelectorAll(".guiche p:first-child");
+
+    let atendimentoEmAndamento = false;
+    for (let i = 0; i < guiches.length; i++) {
+        if (guiches[i].textContent.includes("atendendo")) {
+            atendimentoEmAndamento = true;
+            break;
+        }
+    }
+
+    if (atendimentoEmAndamento) {
+        alert("Por favor, finalize todos os atendimentos antes do Logout.");
+        return;
+    }
+
     const geralBtn = document.getElementById("geral-btn");
     const idosoBtn = document.getElementById("idoso-btn");
     const preferencialBtn = document.getElementById("preferencial-btn");
@@ -144,8 +172,8 @@ document.getElementById("logout-btn").addEventListener("click", function () {
     proximoNumeroIdoso = 1;
     proximoNumeroPreferencial = 1;
 
-    const guiches = document.querySelectorAll(".guiche p:last-child");
-    guiches.forEach(function (status) {
+    const guicheStatus = document.querySelectorAll(".guiche p:last-child");
+    guicheStatus.forEach(function (status) {
         status.textContent = "Status: Deslogado";
     });
 
